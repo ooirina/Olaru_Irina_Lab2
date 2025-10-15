@@ -24,7 +24,7 @@ namespace Olaru_Irina_Lab2.Pages.Books
             ViewData["PublisherID"] = new SelectList(_context.Set<Publisher>(), "ID",
 "PublisherName");
             ViewData["AuthorID"] = new SelectList(_context.Set<Author>(), "ID",
-"FullName");
+"FirstName","LastName");
             return Page();
         }
 
