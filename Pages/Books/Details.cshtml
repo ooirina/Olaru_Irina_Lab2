@@ -35,6 +35,21 @@
         <dd class="col-sm-10">
             @Html.DisplayFor(model => model.Book.PublishingDate)
         </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Book.BookCategories)
+        </dt>
+        <dd class="col-sm-10">
+           @if (Model.Book.BookCategories != null )
+    {
+        foreach (var b in Model.Book.BookCategories)
+        {
+            @b.Category.ID @: - @b.Category.CategoryName <br />
+        }
+    } 
+            
+            
+           
+        </dd>
     </dl>
 </div>
 <div>
